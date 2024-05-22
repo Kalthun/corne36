@@ -72,9 +72,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &trans                      &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans                       &trans  &none
-&none  &hrm_l LEFT_SHIFT NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_9  &hrm_r RIGHT_SHIFT NUMBER_0  &trans  &none
-&none  &trans                      &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans                       &trans  &none
+&none  &trans                      &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans                       &none
+&none  &hrm_l LEFT_SHIFT NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &hrm_r RIGHT_SHIFT NUMBER_0  &none
+&none  &trans                      &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans                       &none
                                                  &trans        &trans        &trans          &trans        &trans        &trans
             >;
         };
