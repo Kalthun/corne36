@@ -36,8 +36,17 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ONE_TILDE";
             #binding-cells = <0>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <125>;
             bindings = <&kp NUMBER_1>, <&kp TILDE>;
+        };
+
+        vim_k: vim_k {
+            compatible = "zmk,behavior-tap-dance";
+            label = "VIM_K";
+            #binding-cells = <0>;
+            bindings = <&hrm RIGHT_WIN K>, <&kp K>;
+
+            tapping-term-ms = <125>;
         };
     };
 
@@ -52,9 +61,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q              &kp W                &kp E            &kp R      &kp T        &kp Y          &kp U        &kp I             &kp O                 &kp P                       &none
-&none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &kp F      &kp G        &kp H          &kp J        &hrm RIGHT_GUI K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
-&none  &kp Z              &kp X                &kp C            &kp V      &kp B        &kp N          &kp M        &kp COMMA         &kp DOT               &kp FSLH                    &none
+&none  &kp Q              &kp W                &kp E            &kp R      &kp T        &kp Y          &kp U        &kp I      &kp O                 &kp P                       &none
+&none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &kp F      &kp G        &kp H          &kp J        &vim_k     &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
+&none  &kp Z              &kp X                &kp C            &kp V      &kp B        &kp N          &kp M        &kp COMMA  &kp DOT               &kp FSLH                    &none
                                                &mo 2            &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 1 ENTER  &mo 3
             >;
         };
