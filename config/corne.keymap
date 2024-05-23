@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
@@ -31,12 +33,19 @@
             hold-trigger-on-release;
         };
 
-        tilde: tilde {
+        one_tilde: one_tilde {
             compatible = "zmk,behavior-tap-dance";
-            label = "TILDE";
+            label = "ONE_TILDE";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp NUMBER_1>, <&kp TILDE>;
+        };
+
+        caps_lock: caps_lock {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_LOCK";
+            #binding-cells = <0>;
+            bindings = <&hrm LEFT_SHIFT A>, <&kt CAPSLOCK>;
         };
     };
 
@@ -51,10 +60,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q              &kp W                &kp E            &kp R      &kp T        &kp Y          &kp U        &kp I             &kp O                 &kp P                       &none
-&none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &kp F      &kp G        &kp H          &kp J        &hrm RIGHT_GUI K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
-&none  &kp Z              &kp X                &kp C            &kp V      &kp B        &kp N          &kp M        &kp COMMA         &kp DOT               &kp FSLH                    &none
-                                               &mo 2            &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 1 ENTER  &mo 3
+&none  &kp Q       &kp W                &kp E            &kp R      &kp T        &kp Y          &kp U        &kp I             &kp O                 &kp P                       &none
+&none  &caps_lock  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &kp F      &kp G        &kp H          &kp J        &hrm RIGHT_GUI K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
+&none  &kp Z       &kp X                &kp C            &kp V      &kp B        &kp N          &kp M        &kp COMMA         &kp DOT               &kp FSLH                    &none
+                                        &mo 2            &lt 1 TAB  &kp SPACE    &kp BACKSPACE  &lt 1 ENTER  &mo 3
             >;
         };
 
@@ -66,27 +75,27 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &tilde  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6            &kp N7                 &kp N8                     &kp N9                          &kp N0                &none
-&none  &trans  &trans  &trans  &trans  &trans    &kp LPAR          &kp RIGHT_PARENTHESIS  &hrm RIGHT_WIN LEFT_BRACE  &hrm RIGHT_CONTROL RIGHT_BRACE  &hrm RIGHT_SHIFT SQT  &none
-&none  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp LESS_THAN              &kp GREATER_THAN                &kp NON_US_BACKSLASH  &none
-                       &trans  &trans  &trans    &trans            &trans                 &trans
+&none  &one_tilde  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6            &kp N7                 &kp N8                     &kp N9                          &kp N0                &none
+&none  &trans      &trans  &trans  &trans  &trans    &kp LPAR          &kp RIGHT_PARENTHESIS  &hrm RIGHT_WIN LEFT_BRACE  &hrm RIGHT_CONTROL RIGHT_BRACE  &hrm RIGHT_SHIFT SQT  &none
+&none  &trans      &trans  &trans  &trans  &trans    &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp LESS_THAN              &kp GREATER_THAN                &kp NON_US_BACKSLASH  &none
+                           &trans  &trans  &trans    &trans            &trans                 &trans
             >;
         };
 
         tool {
             bindings = <
-&none  &trans          &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &none
-&none  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &none
-&none  &bt BT_CLR_ALL  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &none
-                                     &trans        &trans        &trans          &trans  &trans  &trans
+&none  &out OUT_TOG  &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &none
+&none  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &none
+                                   &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
 
         func {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans   &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
