@@ -58,10 +58,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &none
-&none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &none
-&none  &trans        &trans        &trans        &trans        &trans          &trans        &trans        &trans        &trans        &trans        &none
-                                   &trans        &trans        &trans          &trans        &trans        &trans
+&none  &trans                    &trans                      &trans                  &trans        &trans          &trans        &trans        &trans                   &trans                       &trans                     &none
+&none  &hrm LEFT_SHIFT NUMBER_1  &hrm LEFT_CONTROL NUMBER_2  &hrm LEFT_WIN NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &hrm RIGHT_WIN NUMBER_8  &hrm RIGHT_CONTROL NUMBER_9  &hrm RIGHT_SHIFT NUMBER_0  &none
+&none  &trans                    &trans                      &trans                  &trans        &trans          &trans        &trans        &trans                   &trans                       &trans                     &none
+                                                             &trans                  &trans        &trans          &trans        &trans        &trans
             >;
         };
 
