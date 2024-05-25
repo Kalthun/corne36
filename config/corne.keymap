@@ -20,7 +20,7 @@
 
         quick_menu {
             bindings = <&kp LG(D)>;
-            key-positions = <14 21>;
+            key-positions = <15 20>;
         };
 
         quick_lead {
