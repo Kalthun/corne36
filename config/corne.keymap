@@ -77,10 +77,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp NUMBER_1           &kp N2                       &kp N3                  &kp N4               &kp N5       &kp N6            &kp N7               &kp N8                     &kp N9                          &kp N0                &none
-&none  &hrm LEFT_SHIFT CARET  &hrm LEFT_CONTROL AMPERSAND  &hrm LEFT_WIN ASTERISK  &hrm LEFT_ALT MINUS  &kp EQUAL    &kp LPAR          &hrm RIGHT_ALT RPAR  &hrm RIGHT_WIN LEFT_BRACE  &hrm RIGHT_CONTROL RIGHT_BRACE  &hrm RIGHT_SHIFT SQT  &none
-&none  &trans                 &trans                       &trans                  &trans               &trans       &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &kp LESS_THAN              &kp GREATER_THAN                &kp BACKSLASH         &none
-                                                           &trans                  &trans               &trans       &trans            &trans               &trans
+&none  &kp NUMBER_1           &kp N2                       &kp N3                  &kp N4               &kp N5       &kp N6          &kp N7               &kp N8                           &kp N9                                &kp N0                &none
+&none  &hrm LEFT_SHIFT CARET  &hrm LEFT_CONTROL AMPERSAND  &hrm LEFT_WIN ASTERISK  &hrm LEFT_ALT MINUS  &kp EQUAL    &kp LEFT_BRACE  &hrm RIGHT_ALT RPAR  &hrm RIGHT_WIN LEFT_PARENTHESIS  &hrm RIGHT_CONTROL RIGHT_PARENTHESIS  &hrm RIGHT_SHIFT SQT  &none
+&none  &trans                 &trans                       &trans                  &trans               &trans       &trans          &trans               &kp LEFT_BRACKET                 &kp RIGHT_BRACKET                     &kp BACKSLASH         &none
+                                                           &trans                  &trans               &trans       &trans          &trans               &trans
             >;
         };
 
