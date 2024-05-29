@@ -49,6 +49,29 @@
             quick-tap-ms = <135>;
             require-prior-idle-ms = <0>;
         };
+
+        trm: trm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TRM";
+            bindings = <&thumb_mod>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41>;
+            hold-trigger-on-release;
+            quick-tap-ms = <135>;
+            require-prior-idle-ms = <0>;
+        };
+    };
+
+    macros {
+        thumb_mod: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_WIN &mo 1>;
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -62,10 +85,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q              &kp W                &kp E            &kp R            &kp T                  &kp Y          &kp U             &kp I             &kp O                 &kp P                       &none
-&none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &hrm LEFT_ALT F  &kp G                  &kp H          &hrm RIGHT_ALT J  &hrm RIGHT_WIN K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
-&none  &kp Z              &kp X                &kp C            &kp V            &kp B                  &kp N          &kp M             &kp COMMA         &kp DOT               &kp FSLH                    &none
-                                               &mo 2            &lt 1 TAB        &hrm LEFT_WIN SPACE    &kp BACKSPACE  &lt 1 ENTER       &mo 3
+&none  &kp Q              &kp W                &kp E            &kp R            &kp T                  &kp Y         &kp U             &kp I             &kp O                 &kp P                       &none
+&none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &hrm LEFT_ALT F  &kp G                  &kp H         &hrm RIGHT_ALT J  &hrm RIGHT_WIN K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
+&none  &kp Z              &kp X                &kp C            &kp V            &kp B                  &kp N         &kp M             &kp COMMA         &kp DOT               &kp FSLH                    &none
+                                               &mo 2            &lt 1 TAB        &hrm LEFT_WIN SPACE    &trm 0 SPACE  &lt 1 ENTER       &mo 3
             >;
         };
 
