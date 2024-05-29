@@ -23,6 +23,11 @@
             bindings = <&kt CAPSLOCK>;
             key-positions = <13 22>;
         };
+
+        quick_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 16>;
+        };
     };
 
     behaviors {
