@@ -14,16 +14,6 @@
     combos {
         compatible = "zmk,combos";
 
-        quick_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <16 19>;
-        };
-
-        quick_menu {
-            bindings = <&kp LG(D)>;
-            key-positions = <15 20>;
-        };
-
         quick_lead {
             bindings = <&kp LC(SPACE)>;
             key-positions = <37 40>;
@@ -94,7 +84,7 @@
 &none  &kp Q              &kp W                &kp E            &kp R            &kp T                  &kp Y             &kp U             &kp I             &kp O                 &kp P                       &none
 &none  &hrm LEFT_SHIFT A  &hrm LEFT_CONTROL S  &hrm LEFT_WIN D  &hrm LEFT_ALT F  &kp G                  &kp H             &hrm RIGHT_ALT J  &hrm RIGHT_WIN K  &hrm RIGHT_CONTROL L  &hrm RIGHT_SHIFT SEMICOLON  &none
 &none  &kp Z              &kp X                &kp C            &kp V            &kp B                  &kp N             &kp M             &kp COMMA         &kp DOT               &kp FSLH                    &none
-                                               &mo 2            &lt 1 TAB        &hrm LEFT_WIN SPACE    &trm 0 BACKSPACE  &lt 1 ENTER       &mo 3
+                                               &lt 2 ESCAPE     &lt 1 TAB        &hrm LEFT_WIN SPACE    &trm 0 BACKSPACE  &lt 1 ENTER       &lt 3 DELETE
             >;
         };
 
